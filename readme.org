@@ -1,0 +1,32 @@
+* ~stack-overflow-mode~ -- search Stack Overflow from Emacs
+
+  Simple major mode for Emacs to allow for quickly searching stack
+  overflow questions.
+
+  Stack Overflow’s home page is a bit too complicated to comfortably
+  use from ~eww~ or other Emacs based web browsers. This mode allows
+  you to quickly search based on some key words and view question in
+  more detail in ~eww~ (or any other browser).
+
+  [[./screenshot.png]]
+
+** Installation
+
+   Clone the repository:
+
+   #+BEGIN_SRC sh
+     $ mkdir -p ~/.emacs.d/elisp
+     $ git clone git@github.com:swissChili/stack-overflow-mode.git ~/.emacs.d/elisp/stack-overflow
+   #+END_SRC
+
+   In your ~init.el~ or ~.emacs~:
+
+   #+BEGIN_SRC elisp
+     (add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp/stack-overflow"))
+     (require 'stack-overflow)
+   #+END_SRC
+
+** Usage
+   
+   To search for a stack overflow question: ~M-x stack-overflow
+   RET <query> RET~
